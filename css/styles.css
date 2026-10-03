@@ -32,3 +32,52 @@ tr[data-score="2"] .badge { background: var(--risk-2-bg); color: var(--risk-2-fg
 tr[data-score="3"] .badge { background: var(--risk-3-bg); color: var(--risk-3-fg); }
 tr[data-score="4"] .badge { background: var(--risk-4-bg); color: var(--risk-4-fg); }
 tr[data-score="5"] .badge { background: var(--risk-5-bg); color: var(--risk-5-fg); }
+
+/* ---- Page and card ---- */
+
+body {
+  margin: 0;
+  padding: 2rem 1rem;
+  background: #f5f5f4;
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+.card {
+  max-width: 48rem;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+/* ---- Table ---- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+caption {
+  text-align: left;
+  font-weight: 600;
+  padding-bottom: 0.75rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+thead th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  border-bottom-width: 2px;
+}
