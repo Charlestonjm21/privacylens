@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PrivacyLens — Analyze a privacy policy</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="index.html" class="brand">PrivacyLens</a>
+    <a href="index.html" aria-current="page">Analyze</a>
+    <a href="results.html">Results</a>
+    <a href="compare.html">Compare</a>
+    <a href="history.html">History</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <div class="card">
+
+    <h1>Analyze a privacy policy</h1>
+    <p class="lede">
+      Paste a link to any privacy policy and get back a plain-English
+      risk label scored across five categories.
+    </p>
+
+    <form action="results.html" method="get">
+
+      <div class="field">
+        <label for="policy-url">Privacy policy URL</label>
+        <input
+          type="url"
+          id="policy-url"
+          name="url"
+          placeholder="https://example.com/privacy"
+          required>
+        <p class="hint">Must be a direct link to the policy page.</p>
+      </div>
+
+      <p class="divider"><span>or</span></p>
+
+      <div class="field">
+        <label for="policy-text">Paste the policy text</label>
+        <textarea
+          id="policy-text"
+          name="text"
+          rows="8"
+          placeholder="Paste the full text of the privacy policy here..."></textarea>
+      </div>
+
+      <button type="submit" class="btn">Analyze policy</button>
+
+    </form>
+
+  </div>
+
+</body>
+</html>
