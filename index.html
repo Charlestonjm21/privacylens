@@ -25,7 +25,7 @@
       risk label scored across five categories.
     </p>
 
-    <form action="results.html" method="get">
+    <form id="analyze-form" novalidate>
 
       <div class="field">
         <label for="policy-url">Privacy policy URL</label>
@@ -33,9 +33,9 @@
           type="url"
           id="policy-url"
           name="url"
-          placeholder="https://example.com/privacy"
-          required>
+          placeholder="https://example.com/privacy">
         <p class="hint">Must be a direct link to the policy page.</p>
+        <p class="field-error" id="policy-url-error" hidden></p>
       </div>
 
       <p class="divider"><span>or</span></p>
@@ -47,6 +47,7 @@
           name="text"
           rows="8"
           placeholder="Paste the full text of the privacy policy here..."></textarea>
+        <p class="field-error" id="policy-text-error" hidden></p>
       </div>
 
       <button type="submit" class="btn">Analyze policy</button>
@@ -54,6 +55,9 @@
     </form>
 
   </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/validate.js"></script>
 
 </body>
 </html>
