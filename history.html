@@ -22,52 +22,22 @@
     <h1>History</h1>
     <p class="lede">Policies you have analyzed previously.</p>
 
-    <ul class="history-list">
+    <ul class="history-list" id="history-list"></ul>
 
-      <li class="history-item" data-score="4">
-        <div class="history-main">
-          <a href="results.html" class="history-site">example-social.com</a>
-          <span class="history-date">October 3, 2026</span>
-        </div>
-        <span class="badge">3.6 — High</span>
-      </li>
-
-      <li class="history-item" data-score="2">
-        <div class="history-main">
-          <a href="results.html" class="history-site">quiet-notes.app</a>
-          <span class="history-date">October 1, 2026</span>
-        </div>
-        <span class="badge">1.8 — Low</span>
-      </li>
-
-      <li class="history-item" data-score="5">
-        <div class="history-main">
-          <a href="results.html" class="history-site">adtrack-metrics.io</a>
-          <span class="history-date">September 28, 2026</span>
-        </div>
-        <span class="badge">4.6 — Severe</span>
-      </li>
-
-      <li class="history-item" data-score="3">
-        <div class="history-main">
-          <a href="results.html" class="history-site">mailbox-plus.com</a>
-          <span class="history-date">September 25, 2026</span>
-        </div>
-        <span class="badge">2.9 — Moderate</span>
-      </li>
-
-    </ul>
-      <div class="empty-state" hidden>
-        <p class="empty-title">No analyses yet</p>
-        <p class="empty-body">
-          Policies you analyze will appear here so you can revisit or
-          compare them later.
-        </p>
-        <a href="index.html" class="btn">Analyze your first policy</a>
-      </div>
-
+    <div class="empty-state" id="history-empty" hidden>
+      <p class="empty-title">No analyses yet</p>
+      <p class="empty-body">
+        Policies you analyze will appear here so you can revisit or
+        compare them later.
+      </p>
+      <a href="index.html" class="btn">Analyze your first policy</a>
+    </div>
 
   </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/history.js"></script>
 
 </body>
 </html>
