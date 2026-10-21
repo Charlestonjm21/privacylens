@@ -393,3 +393,26 @@ textarea {
 [aria-invalid="true"] {
   border-color: #a01b1b;
 }
+
+/* ---- Compare controls ---- */
+
+.compare-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.compare-controls .field {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: var(--surface);
+}

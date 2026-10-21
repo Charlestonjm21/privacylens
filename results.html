@@ -50,7 +50,11 @@
   <script src="js/data.js"></script>
   <script src="js/render.js"></script>
   <script>
-    renderAnalysis(MOCK_ANALYSES["example-social.com"]);
+    const stored = sessionStorage.getItem("currentAnalysis");
+    const analysis = stored
+      ? JSON.parse(stored)
+      : MOCK_ANALYSES["example-social.com"];
+    renderAnalysis(analysis);
   </script>
 
 </body>

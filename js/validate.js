@@ -2,10 +2,6 @@
  * Form handling and client-side validation for the analyze page.
  */
 
-/**
- * Pulls a hostname out of a URL string.
- * Returns null if the string is not a valid URL.
- */
 function extractHostname(value) {
   try {
     const url = new URL(value);
@@ -18,9 +14,6 @@ function extractHostname(value) {
   }
 }
 
-/**
- * Shows an error message beneath a field and marks it invalid.
- */
 function showError(field, message) {
   const errorEl = document.querySelector("#" + field.id + "-error");
   errorEl.textContent = message;
@@ -28,9 +21,6 @@ function showError(field, message) {
   field.setAttribute("aria-invalid", "true");
 }
 
-/**
- * Clears any error shown for a field.
- */
 function clearError(field) {
   const errorEl = document.querySelector("#" + field.id + "-error");
   errorEl.textContent = "";
@@ -38,9 +28,6 @@ function clearError(field) {
   field.removeAttribute("aria-invalid");
 }
 
-/**
- * Validates the form. Returns the hostname to analyze, or null.
- */
 function validateForm(urlField, textField) {
   const urlValue = urlField.value.trim();
   const textValue = textField.value.trim();
@@ -73,9 +60,6 @@ function validateForm(urlField, textField) {
   return "pasted-text";
 }
 
-/**
- * Wires up the form once the page has loaded.
- */
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("#analyze-form");
   if (!form) return;
@@ -91,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const analysis = MOCK_ANALYSES[target] || MOCK_ANALYSES["example-social.com"];
     sessionStorage.setItem("currentAnalysis", JSON.stringify(analysis));
+    addToHistory(analysis);
     window.location.href = "results.html";
   });
 

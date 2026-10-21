@@ -22,50 +22,48 @@
     <h1>Compare policies</h1>
     <p class="lede">Two policies scored on the same five categories.</p>
 
-    <table class="compare-table">
-      <caption>Category scores, side by side</caption>
-      <thead>
-        <tr>
-          <th scope="col">Category</th>
-          <th scope="col">example-social.com</th>
-          <th scope="col">quiet-notes.app</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">Data collected</th>
-          <td data-score="4"><span class="badge">4 — High</span></td>
-          <td data-score="2"><span class="badge">2 — Low</span></td>
-        </tr>
-        <tr>
-          <th scope="row">Third-party sharing</th>
-          <td data-score="5"><span class="badge">5 — Severe</span></td>
-          <td data-score="1"><span class="badge">1 — Minimal</span></td>
-        </tr>
-        <tr>
-          <th scope="row">Retention</th>
-          <td data-score="3"><span class="badge">3 — Moderate</span></td>
-          <td data-score="2"><span class="badge">2 — Low</span></td>
-        </tr>
-        <tr>
-          <th scope="row">User rights</th>
-          <td data-score="2"><span class="badge">2 — Low</span></td>
-          <td data-score="2"><span class="badge">2 — Low</span></td>
-        </tr>
-        <tr>
-          <th scope="row">Tracking</th>
-          <td data-score="4"><span class="badge">4 — High</span></td>
-          <td data-score="2"><span class="badge">2 — Low</span></td>
-        </tr>
-        <tr class="compare-total">
-          <th scope="row">Overall</th>
-          <td data-score="4"><span class="badge">3.6 — High</span></td>
-          <td data-score="2"><span class="badge">1.8 — Low</span></td>
-        </tr>
-      </tbody>
-    </table>
+    <div id="compare-main">
+
+      <div class="compare-controls">
+        <div class="field">
+          <label for="left-select">First policy</label>
+          <select id="left-select"></select>
+        </div>
+        <div class="field">
+          <label for="right-select">Second policy</label>
+          <select id="right-select"></select>
+        </div>
+      </div>
+
+      <table class="compare-table">
+        <caption>Category scores, side by side</caption>
+        <thead>
+          <tr>
+            <th scope="col">Category</th>
+            <th scope="col" id="left-heading"></th>
+            <th scope="col" id="right-heading"></th>
+          </tr>
+        </thead>
+        <tbody id="compare-rows"></tbody>
+      </table>
+
+    </div>
+
+    <div class="empty-state" id="compare-empty" hidden>
+      <p class="empty-title">Not enough policies to compare</p>
+      <p class="empty-body">
+        Analyze at least two policies and you can line them up
+        side by side here.
+      </p>
+      <a href="index.html" class="btn">Analyze a policy</a>
+    </div>
 
   </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/history.js"></script>
+  <script src="js/compare.js"></script>
 
 </body>
 </html>
