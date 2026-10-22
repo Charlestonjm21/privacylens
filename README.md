@@ -7,4 +7,5 @@ COMP 322 Honors Contract NC A&T, Fall 2026.
 
 ## Status
 M1 static frontend (completed)
+
 M2 Interactive frontend (completed)
